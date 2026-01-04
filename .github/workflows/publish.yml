@@ -20,6 +20,7 @@ jobs:
       - run: cd shared
       - run: npm config delete always-auth
       - run: npm config delete key _auth _authToken username _password
+      - run: npm install --package-lock-only
       - run: npm ci
       - run: npm publish
         env:
