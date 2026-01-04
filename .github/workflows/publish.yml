@@ -2,7 +2,10 @@ name: Publish "shared" package to GitHub Packages
 #on:
 #  release:
 #    types: [published]
-on: [push]
+on:
+  push:
+    paths:
+      - "shared/src/**"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,16 +14,17 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v4
+        with:
+            sparse-checkout: shared
       # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v4
         with:
           node-version: '24.9.0'
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@kazurayam'
-      - run: cd shared
       - run: npm config delete always-auth
       - run: npm config delete key _auth _authToken username _password
-      - run: npm install --package-lock-only
+      - run: cd shared && npm install --package-lock-only
       - run: npm ci
       - run: npm publish
         env:
