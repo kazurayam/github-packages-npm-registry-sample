@@ -18,6 +18,8 @@ jobs:
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@kazurayam'
       - run: cd shared
+      - run: npm config delete always-auth
+      - run: npm config delete key _auth _authToken username _password
       - run: npm ci
       - run: npm publish
         env:
