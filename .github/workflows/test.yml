@@ -1,3 +1,4 @@
+# Quoted from https://www.kagoya.jp/howto/it-glossary/develop/githubactions/
 name: learn-github-actions
 on: [push]
 jobs:
