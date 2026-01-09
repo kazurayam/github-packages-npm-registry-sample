@@ -1,0 +1,13 @@
+{
+    "name": "@kazurayam/github-packages-npm-registry-sample_frontend",
+    "version": "1.0.0",
+    "description": "",
+    "license": "ISC",
+    "author": "kazurayam",
+    "type": "module",
+    "main": "main.ts",
+    "dependencies": {
+        "es-toolkit": "latest",
+        "shared": "workspace:*"
+    }
+}

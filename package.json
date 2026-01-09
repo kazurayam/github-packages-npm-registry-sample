@@ -1,0 +1,20 @@
+{
+    "name": "@kazurayam/github-packages-npm-registry-sample",
+    "license": "UNLICENSED",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+
+    "scripts": {
+        "dev": "bun run packages/frontend/src/main.ts"
+    },
+    "module": "index.ts",
+    "type": "module",
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    }
+}

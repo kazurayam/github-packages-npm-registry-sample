@@ -1,0 +1,16 @@
+{
+    "name": "@kazurayam/github-packages-npm-registry-sample_shared",
+    "version": "1.0.0",
+    "description": "This is a sample of using the npm registry in GitHub Packages to distribute shared packages",
+    "license": "ISC",
+    "author": "kazurayam",
+    "type": "module",
+    "main": "index.ts",
+    "dependencies": {
+        "@types/bun": "latest",
+        "es-toolkit": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    }
+}
